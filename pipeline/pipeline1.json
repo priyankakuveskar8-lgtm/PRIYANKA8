@@ -42,6 +42,25 @@
 						"mappings": [
 							{
 								"sink": {
+									"path": "$['fruit']"
+								}
+							},
+							{
+								"sink": {
+									"path": "$['size']"
+								}
+							},
+							{
+								"source": {
+									"name": "Date",
+									"type": "String"
+								},
+								"sink": {
+									"path": "$['color']"
+								}
+							},
+							{
+								"sink": {
 									"path": "$['Column_1']"
 								}
 							}
