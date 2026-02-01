@@ -43,8 +43,159 @@
 						"type": "TabularTranslator",
 						"mappings": [
 							{
+								"source": {
+									"name": "Prop_0",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
-									"path": "$['Column_1']"
+									"name": "Prop_0",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Revenue",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Revenue",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Expenses",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Expenses",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COGS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "COGS",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Operating_Expenses",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Operating_Expenses",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Depreciation",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Depreciation",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Amortization",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Amortization",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Cash_Inflows",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Cash_Inflows",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Cash_Outflows",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Cash_Outflows",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AR",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AP",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Department",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Department",
+									"type": "String",
+									"physicalType": "String"
 								}
 							}
 						],
