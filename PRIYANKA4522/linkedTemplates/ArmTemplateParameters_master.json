@@ -5,16 +5,19 @@
 		"factoryName": {
 			"value": "PRIYANKA4522"
 		},
-		"AzureDataLakeStorage1_accountKey": {
-			"value": ""
-		},
-		"AzureDataLakeStorage2_accountKey": {
-			"value": ""
-		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
 		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
 			"value": ""
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
