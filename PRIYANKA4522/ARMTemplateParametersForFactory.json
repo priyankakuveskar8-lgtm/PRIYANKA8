@@ -20,6 +20,9 @@
 		"AzureDataLakeStorage2_accountKey": {
 			"value": ""
 		},
+		"Inputecontainerlink_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://priyanka9522.dfs.core.windows.net/"
 		},

@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
 		},
+		"Inputecontainerlink_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Inputecontainerlink'"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://priyanka9522.dfs.core.windows.net/"
@@ -41,14 +45,14 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"name": "[concat(parameters('factoryName'), '/pipeline4')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"activities": [
 					{
-						"name": "Activity 2",
-						"description": "I want to copy data one contsiner to another",
+						"name": "Copy data container 1",
+						"description": "copy data one container to another",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -85,164 +89,6 @@
 							"enableStaging": false,
 							"translator": {
 								"type": "TabularTranslator",
-								"mappings": [
-									{
-										"source": {
-											"name": "Prop_0",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Prop_0",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Date",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Date",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Revenue",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Revenue",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Expenses",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Expenses",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "COGS",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "COGS",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Operating_Expenses",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Operating_Expenses",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Depreciation",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Depreciation",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Amortization",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Amortization",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Cash_Inflows",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Cash_Inflows",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Cash_Outflows",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Cash_Outflows",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "AR",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "AR",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "AP",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "AP",
-											"type": "String",
-											"physicalType": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "Department",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Department",
-											"type": "String",
-											"physicalType": "String"
-										}
-									}
-								],
 								"typeConversion": true,
 								"typeConversionSettings": {
 									"allowDataTruncation": true,
@@ -252,14 +98,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ADLSourceLinkeService",
+								"referenceName": "DelimitedText2",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "ADLSourceLinkeService",
+								"referenceName": "DelimitedText3",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -272,7 +118,8 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ADLSourceLinkeService')]"
+				"[concat(variables('factoryId'), '/datasets/DelimitedText2')]",
+				"[concat(variables('factoryId'), '/datasets/DelimitedText3')]"
 			]
 		},
 		{
@@ -438,6 +285,177 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Inputecontainerlink",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "data_test (1).csv",
+						"container": "democontainer9522"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "Duration",
+						"type": "String"
+					},
+					{
+						"name": "Pulse",
+						"type": "String"
+					},
+					{
+						"name": "Maxpulse",
+						"type": "String"
+					},
+					{
+						"name": "Calories",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Inputecontainerlink')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText2')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Inputecontainerlink",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "data_test (1).csv",
+						"container": "democontainer9522"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "Duration",
+						"type": "String"
+					},
+					{
+						"name": "Pulse",
+						"type": "String"
+					},
+					{
+						"name": "Maxpulse",
+						"type": "String"
+					},
+					{
+						"name": "Calories",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Inputecontainerlink')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText3')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Inputecontainerlink",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "data (4).csv",
+						"container": "democontainer9522"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "Prop_0",
+						"type": "String"
+					},
+					{
+						"name": "Date",
+						"type": "String"
+					},
+					{
+						"name": "Revenue",
+						"type": "String"
+					},
+					{
+						"name": "Expenses",
+						"type": "String"
+					},
+					{
+						"name": "COGS",
+						"type": "String"
+					},
+					{
+						"name": "Operating_Expenses",
+						"type": "String"
+					},
+					{
+						"name": "Depreciation",
+						"type": "String"
+					},
+					{
+						"name": "Amortization",
+						"type": "String"
+					},
+					{
+						"name": "Cash_Inflows",
+						"type": "String"
+					},
+					{
+						"name": "Cash_Outflows",
+						"type": "String"
+					},
+					{
+						"name": "AR",
+						"type": "String"
+					},
+					{
+						"name": "AP",
+						"type": "String"
+					},
+					{
+						"name": "Department",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Inputecontainerlink')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/Json1')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -580,6 +598,19 @@
 						"type": "SecureString",
 						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
 					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Inputecontainerlink')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('Inputecontainerlink_connectionString')]"
 				}
 			},
 			"dependsOn": []
