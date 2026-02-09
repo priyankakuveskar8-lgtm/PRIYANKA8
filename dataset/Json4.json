@@ -1,0 +1,35 @@
+{
+	"name": "Json4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "sample1.json",
+				"fileSystem": "target123"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Duration": {
+					"type": "string"
+				},
+				"Pulse": {
+					"type": "string"
+				},
+				"Maxpulse": {
+					"type": "string"
+				},
+				"Calories": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
