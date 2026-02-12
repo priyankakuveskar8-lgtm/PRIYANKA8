@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline8",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/democontainer9522/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/339106a4-d2d3-4306-a5fd-54f9e0c264d4/resourceGroups/ATHANG9522/providers/Microsoft.Storage/storageAccounts/priyanka9522",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
