@@ -29,6 +29,9 @@
 		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
 		"Inputecontainerlink_connectionString": {
 			"value": ""
 		},
@@ -51,6 +54,15 @@
 			"value": "master"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "Priyankit456"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "priyankit123.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "Priyankit123"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"value": "Priyankit456"
 		}
 	}
