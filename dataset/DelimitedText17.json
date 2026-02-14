@@ -1,0 +1,41 @@
+{
+	"name": "DelimitedText17",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Inputecontainerlink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "data_test (1).csv",
+				"folderPath": "archives",
+				"container": "democontainer9522"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Duration",
+				"type": "String"
+			},
+			{
+				"name": "Pulse",
+				"type": "String"
+			},
+			{
+				"name": "Maxpulse",
+				"type": "String"
+			},
+			{
+				"name": "Calories",
+				"type": "String"
+			}
+		]
+	}
+}
