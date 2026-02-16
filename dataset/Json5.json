@@ -1,0 +1,34 @@
+{
+	"name": "Json5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage5",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "target123"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Duration": {
+					"type": "string"
+				},
+				"Pulse": {
+					"type": "string"
+				},
+				"Maxpulse": {
+					"type": "string"
+				},
+				"Calories": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
