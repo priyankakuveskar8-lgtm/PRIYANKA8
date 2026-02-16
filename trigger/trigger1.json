@@ -2,15 +2,8 @@
 	"name": "trigger1",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "pipeline8",
-					"type": "PipelineReference"
-				}
-			}
-		],
+		"runtimeState": "Stopped",
+		"pipelines": [],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/democontainer9522/blobs/",
