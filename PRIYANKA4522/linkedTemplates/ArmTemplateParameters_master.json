@@ -26,6 +26,9 @@
 		"AzureDataLakeStorage4_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorage5_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
@@ -47,6 +50,9 @@
 		"AzureDataLakeStorage4_properties_typeProperties_url": {
 			"value": "https://priyanka9522.dfs.core.windows.net/"
 		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"value": "https://priyanka9522.dfs.core.windows.net/"
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "priyankit123.database.windows.net"
 		},
@@ -64,6 +70,9 @@
 		},
 		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"value": "Priyankit456"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/339106a4-d2d3-4306-a5fd-54f9e0c264d4/resourceGroups/ATHANG9522/providers/Microsoft.Storage/storageAccounts/priyanka9522"
 		},
 		"containerUri": {
 			"value": ""
