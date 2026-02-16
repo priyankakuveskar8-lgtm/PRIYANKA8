@@ -53,7 +53,14 @@
 			{
 				"name": "Delete1",
 				"type": "Delete",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "activity 1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
