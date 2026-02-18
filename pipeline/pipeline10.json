@@ -19,9 +19,16 @@
 						"referenceName": "DelimitedText24",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"itemName",
+						"childItems",
+						"itemType",
+						"lastModified",
+						"exists"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
