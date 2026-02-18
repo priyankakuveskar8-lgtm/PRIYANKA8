@@ -47,9 +47,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
 		},
+		"AzureSqlDatabase3_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase3'"
+		},
 		"Inputecontainerlink_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Inputecontainerlink'"
+		},
+		"linkservice_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linkservice'"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
@@ -92,6 +100,30 @@
 			"defaultValue": "Priyankit123"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Priyankit456"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "priyankit123.database.windows.net"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Priyankit123"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Priyankit456"
+		},
+		"linkservice_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "priyankit123.database.windows.net"
+		},
+		"linkservice_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Priyankit123"
+		},
+		"linkservice_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Priyankit456"
 		},
@@ -156,8 +188,14 @@
 					"AzureSqlDatabase2_password": {
 						"value": "[parameters('AzureSqlDatabase2_password')]"
 					},
+					"AzureSqlDatabase3_password": {
+						"value": "[parameters('AzureSqlDatabase3_password')]"
+					},
 					"Inputecontainerlink_connectionString": {
 						"value": "[parameters('Inputecontainerlink_connectionString')]"
+					},
+					"linkservice_password": {
+						"value": "[parameters('linkservice_password')]"
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
@@ -191,6 +229,24 @@
 					},
 					"AzureSqlDatabase2_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase3_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase3_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase3_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_userName')]"
+					},
+					"linkservice_properties_typeProperties_server": {
+						"value": "[parameters('linkservice_properties_typeProperties_server')]"
+					},
+					"linkservice_properties_typeProperties_database": {
+						"value": "[parameters('linkservice_properties_typeProperties_database')]"
+					},
+					"linkservice_properties_typeProperties_userName": {
+						"value": "[parameters('linkservice_properties_typeProperties_userName')]"
 					},
 					"trigger1_properties_typeProperties_scope": {
 						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
@@ -237,6 +293,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'PRIYANKA4522_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "PRIYANKA4522_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'PRIYANKA4522_ArmTemplate_2')]"
 			]
 		}
 	]

@@ -35,7 +35,13 @@
 		"AzureSqlDatabase2_password": {
 			"value": ""
 		},
+		"AzureSqlDatabase3_password": {
+			"value": ""
+		},
 		"Inputecontainerlink_connectionString": {
+			"value": ""
+		},
+		"linkservice_password": {
 			"value": ""
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
@@ -69,6 +75,24 @@
 			"value": "Priyankit123"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "Priyankit456"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_server": {
+			"value": "priyankit123.database.windows.net"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_database": {
+			"value": "Priyankit123"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
+			"value": "Priyankit456"
+		},
+		"linkservice_properties_typeProperties_server": {
+			"value": "priyankit123.database.windows.net"
+		},
+		"linkservice_properties_typeProperties_database": {
+			"value": "Priyankit123"
+		},
+		"linkservice_properties_typeProperties_userName": {
 			"value": "Priyankit456"
 		},
 		"trigger1_properties_typeProperties_scope": {
